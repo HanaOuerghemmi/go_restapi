@@ -28,7 +28,7 @@ func main() {
 	}
 	//? start api server
 
-	apiServer := api.NewAPIServe(":8080")
+	apiServer := api.NewAPIServe(":8080", dbConn)
 	if err := apiServer.Run(); err != nil {
 		log.Fatal("error runing api server")
 	}
